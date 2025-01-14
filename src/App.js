@@ -1,5 +1,5 @@
 // App.js
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Filters from './components/Filters';
 import Playlist from './components/Playlist';
 import './App.css';
@@ -17,11 +17,8 @@ function App() {
     rankedVods: 'PLwn5keKYZ1AlZkTKvsJKUYOHw3XhZouG8&si=QBUjyGRqNojaGVyu',
   };
 
-  useEffect(() => {
-    fetchVideos(currentPlaylistId);
-  }, [currentPlaylistId]);
-
-  const fetchVideos = async (playlistId) => {
+  // Use useCallback to memoize the fetchVideos function
+  const fetchVideos = useCallback(async (playlistId) => {
     const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=100&playlistId=${playlistId}&key=${apiKey}`;
     try {
       const response = await fetch(url);
@@ -30,7 +27,11 @@ function App() {
     } catch (error) {
       console.error('Error fetching videos:', error);
     }
-  };
+  }, [apiKey]);
+
+  useEffect(() => {
+    fetchVideos(currentPlaylistId);
+  }, [currentPlaylistId, fetchVideos]); // Now fetchVideos is included in the dependency array
 
   const handleSearch = (term) => {
     setSearchTerm(term.toLowerCase().trim());
@@ -74,5 +75,3 @@ function App() {
 }
 
 export default App;
-
-
