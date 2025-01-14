@@ -1,0 +1,205 @@
+/* Global styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+  background-color: #1a1a1a;
+  /* Dark background */
+  color: #e0e0e0;
+  /* Light text color */
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container for centered layout */
+.container {
+  width: 100%;
+  max-width: 1500px;
+  text-align: center;
+}
+
+/* Header */
+header h1 {
+  font-size: 1.8rem;
+  color: #ff4655;
+  /* Valorant red color */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Search Bar */
+.search-bar {
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border: 2px solid #ff4655;
+  border-radius: 5px;
+  background-color: #2b2b2b;
+  color: #e0e0e0;
+}
+
+/* Filters section */
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  
+}
+
+/* Updated horizontal-checkboxes to create rows with 5 items per row */
+.horizontal-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(150px, 1fr)); /* Limit each column to a minimum of 150px */
+  gap: 5px 10px; /* Horizontal gap of 5px and vertical gap of 10px */
+  max-width: 800px; /* Limit the overall width of the filters section */
+  margin: 0 auto; /* Center the filters section */
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+  /* Space between checkbox and label */
+  cursor: pointer;
+  /* Pointer cursor for checkboxes */
+}
+
+/* Ensure labels are aligned correctly */
+.filters label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align checkboxes to the left */
+  font-size: 0.9rem;
+  color: #ff4655;
+  gap: 3px; /* Space between checkbox and label */
+  margin-bottom: 10px; /* Space between rows */
+  font-weight: bold;
+}
+
+.filters select {
+  padding: 8px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #2b2b2b;
+  color: #e0e0e0;
+  font-size: 1rem;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.apply-button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #ff4655;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 800px; /* Ensure the width of the button adjusts based on text */
+  align-self: center;  /* This ensures it stays centered within its container */
+}
+
+.apply-button:hover {
+  background-color: #e63946;
+}
+
+/* Results display section (optional) */
+.results {
+  margin-top: 20px;
+  color: #e0e0e0;
+  font-size: 1rem;
+}
+
+/* Playlist style */
+#playlist-container {
+  max-height: 500px;
+  /* Set a maximum height for the playlist */
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+  margin-top: 15px;
+}
+
+/* Style for the scrollbar */
+#playlist-container::-webkit-scrollbar {
+  width: 10px;
+  /* Width of the scrollbar */
+  border-radius: 10px;
+}
+
+#playlist-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  /* Color of the scrollbar thumb */
+  border-radius: 10px;
+  /* Rounded corners for the scrollbar thumb */
+}
+
+#playlist-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+  /* Darker color when hovering over the scrollbar */
+}
+
+#playlist-container::-webkit-scrollbar-track {
+  background-color: #3f3e3e;
+  /* Background color of the track */
+  border-radius: 10px;
+  /* Rounded corners for the track */
+}
+
+#playlist {
+  display: grid;
+  /* Use grid layout for the playlist */
+  grid-template-columns: repeat(5, 1fr);
+  /* Create 3 equal columns */
+  gap: 10px;
+  /* Space between grid items */
+  padding: 10px;
+  /* Padding around the grid */
+  width: 100%;
+  max-width: 100%;
+}
+
+#playlist div {
+  display: flex;
+  /* Flex container for each video item */
+  flex-direction: column;
+  /* Stack items vertically */
+  align-items: center;
+  /* Center items horizontally */
+  background-color: #2b2424;
+  /* Optional: background for better visibility */
+  border: 1px solid #575757;
+  /* Optional: border for separation */
+  border-radius: 5px;
+  /* Optional: rounded corners */
+  padding: 10px;
+  /* Padding inside each video container */
+}
+
+#playlist img {
+  width: 100%;
+  /* Set a responsive width for the thumbnail */
+  height: auto;
+  /* Maintain aspect ratio */
+  margin-bottom: 5px;
+  /* Space between the thumbnail and title */
+}
+
+h4 {
+  margin: 10px 0;
+  /* Space out section headings */
+  font-size: 16px;
+  /* Set size of section headings */
+  color: #ff4655;
+  /* Color of the section headings */
+}
+
+
