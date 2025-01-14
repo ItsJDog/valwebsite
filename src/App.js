@@ -56,8 +56,9 @@ function App() {
 
   return (
     <div className="container">
+      <div className="left">
       <header>
-        <h1>Search Valorant Vods</h1>
+        <h1>Valorant Vods</h1>
         <input
           type="text"
           className="search-bar"
@@ -69,6 +70,7 @@ function App() {
         onApplyFilters={handleApplyFilters}
         onPlaylistChange={(type) => setCurrentPlaylistId(playlistIds[type])}
       />
+      </div>
       <Playlist videos={filteredVideos} />
     </div>
   );
