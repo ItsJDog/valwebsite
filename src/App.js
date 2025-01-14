@@ -11,7 +11,7 @@ function App() {
   const [selectedMaps, setSelectedMaps] = useState([]);
   const [currentPlaylistId, setCurrentPlaylistId] = useState('playlistId_VCT');
 
-  const apiKey = 'AIzaSyBC35FQc4FxqGR4NCna-gcPiT_9T9EcmCM'; // Replace with your API key
+  const apiKey = process.env.YOUTUBE_API; // Replace with your API key
   const playlistIds = {
     vctVods: 'PLwn5keKYZ1Al0pTz6HJwZIKxkP38rnuhH&si=fjSF2Ng-pZ9udBDf',
     rankedVods: 'PLwn5keKYZ1AlZkTKvsJKUYOHw3XhZouG8&si=QBUjyGRqNojaGVyu',
