@@ -36,7 +36,7 @@ header h1 {
 
 /* Search Bar */
 .search-bar {
-  width: 60%;
+  width: 600px;
   padding: 10px;
   margin-bottom: 20px;
   font-size: 1rem;
@@ -91,7 +91,7 @@ input[type="checkbox"] {
   color: #e0e0e0;
   font-size: 1rem;
   margin: 0 auto;
-  width: 60%;
+  width: 600px;
 }
 
 .apply-button {
