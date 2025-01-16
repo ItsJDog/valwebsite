@@ -22,7 +22,9 @@ const Filters = ({ onApplyFilters, onPlaylistChange }) => {
       <div className="filters">
         <label htmlFor="video-type">Type:</label>
         <select id="video-type" onChange={(e) => onPlaylistChange(e.target.value)}>
-          <option value="vctVods">VCT VODs</option>
+          <option value="vctNA2025Kickoff">VCT NA 2025 Kickoff</option>
+          <option value="vctEMEA2025Kickoff">VCT EMEA 2025 Kickoff</option>
+          <option value="vctPACIFIC2025Kickoff">VCT PACIFIC 2025 Kickoff</option>
           <option value="rankedVods">Ranked VODs</option>
         </select>
   

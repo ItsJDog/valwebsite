@@ -13,7 +13,9 @@ function App() {
 
   const apiKey = process.env.REACT_APP_YOUTUBE_API; // Replace with your API key
   const playlistIds = {
-    vctVods: 'PLwn5keKYZ1Al0pTz6HJwZIKxkP38rnuhH&si=fjSF2Ng-pZ9udBDf',
+    vctEMEA2025Kickoff: 'PLwn5keKYZ1Al0pTz6HJwZIKxkP38rnuhH&si=NYS245fj35TBym0_',
+    vctNA2025Kickoff: 'PLwn5keKYZ1AmGf3hys4oYzM0Kl3nlR_mC&si=ytjvFOo_Hxz7XWIQ',
+    vctPACIFIC2025Kickoff: 'PLwn5keKYZ1AkciWd83w-R55rnrvu7-LtS&si=99pvHeDCNhOdpez3',
     rankedVods: 'PLwn5keKYZ1AlZkTKvsJKUYOHw3XhZouG8&si=QBUjyGRqNojaGVyu',
   };
 
